@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión de Eventos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Panel de control -->
+        <div class="panel-control">
+            <h1>Sistema de Gestión de Eventos</h1>
+            <button id="addEventButton">Agregar Evento</button>
+        </div>
+        
+        <!-- Filtros -->
+        <div class="filters">
+            <label for="eventType">Tipo de Evento</label>
+            <select id="eventType">
+                <option value="concierto">Concierto</option>
+                <option value="grabacion">Grabación</option>
+                <option value="reunion">Reunión</option>
+            </select>
+            
+            <label for="eventDate">Fecha</label>
+            <input type="date" id="eventDate">
+            
+            <button onclick="filterEvents()">Filtrar</button>
+        </div>
+
+        <!-- Lista de eventos -->
+        <div id="eventList" class="event-list">
+            <h2>Eventos</h2>
+            <ul id="events">
+                <!-- Los eventos se agregarán aquí dinámicamente -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
