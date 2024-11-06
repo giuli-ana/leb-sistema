@@ -19,7 +19,7 @@ function filterEvents() {
 
 function displayEvents(events) {
     const eventList = document.getElementById("events");
-    eventList.innerHTML = ''; // Limpiar lista
+    eventList.innerHTML = '';
 
     events.forEach(event => {
         const li = document.createElement("li");
@@ -33,10 +33,8 @@ function displayEvents(events) {
     });
 }
 
-// Inicializar los eventos
 displayEvents(events);
 
-// Función para agregar nuevos eventos
 document.getElementById('addEventButton').addEventListener('click', () => {
     const newEvent = {
         id: events.length + 1,
